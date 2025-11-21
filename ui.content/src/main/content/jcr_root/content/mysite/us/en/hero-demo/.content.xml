@@ -11,38 +11,38 @@
             jcr:primaryType="nt:unstructured"
             sling:resourceType="mysite/components/container"
             layout="responsiveGrid">
-            <hero
-                jcr:primaryType="nt:unstructured"
-                sling:resourceType="mysite/components/hero"
-                alignment="left"
-                alt="Financial success and growth"
-                minHeight="600"
-                overlayOpacity="0.5">
-                <title
-                    jcr:primaryType="nt:unstructured"
-                    sling:resourceType="mysite/components/title"
-                    jcr:title="Transform Your Financial Future"
-                    type="h1"/>
-                <text
-                    jcr:primaryType="nt:unstructured"
-                    sling:resourceType="mysite/components/text"
-                    text="&lt;p&gt;Discover innovative banking solutions designed to help you achieve your goals. From personal accounts to business services, we're here to support your journey.&lt;/p&gt;"
-                    textIsRich="true"/>
-                <button_primary
-                    jcr:primaryType="nt:unstructured"
-                    sling:resourceType="mysite/components/button"
-                    text="Get Started"
-                    link="/content/mysite/us/en"/>
-                <button_secondary
-                    jcr:primaryType="nt:unstructured"
-                    sling:resourceType="mysite/components/button"
-                    text="Learn More"
-                    link="/content/mysite/us/en"/>
-            </hero>
             <container
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="mysite/components/container"
                 layout="responsiveGrid">
+                <hero
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="mysite/components/hero"
+                    alignment="left"
+                    alt="Financial success and growth"
+                    minHeight="600"
+                    overlayOpacity="0.5">
+                    <title
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="mysite/components/title"
+                        jcr:title="Transform Your Financial Future"
+                        type="h1"/>
+                    <text
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="mysite/components/text"
+                        text="&lt;p&gt;Discover innovative banking solutions designed to help you achieve your goals. From personal accounts to business services, we're here to support your journey.&lt;/p&gt;"
+                        textIsRich="true"/>
+                    <button_primary
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="mysite/components/button"
+                        text="Get Started"
+                        link="/content/mysite/us/en"/>
+                    <button_secondary
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="mysite/components/button"
+                        text="Learn More"
+                        link="/content/mysite/us/en"/>
+                </hero>
                 <title
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="mysite/components/title"
