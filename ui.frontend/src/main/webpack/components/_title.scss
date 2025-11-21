@@ -1,0 +1,21 @@
+.cmp-title {
+    margin-bottom: $spacing-md;
+
+    &__text {
+        font-family: $font-family-heading;
+        font-weight: 700;
+        color: $color-text-primary;
+        margin: 0;
+
+        // Sizes are handled by H1-H6 tags usually, but we can enforce if needed
+    }
+
+    &__link {
+        color: inherit;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}

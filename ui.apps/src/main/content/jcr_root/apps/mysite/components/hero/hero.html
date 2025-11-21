@@ -1,0 +1,31 @@
+<sly data-sly-use.hero="com.adobe.cq.wcm.core.components.models.Container"
+    data-sly-use.templates="core/wcm/components/commons/v1/templates.html"
+    data-sly-test.hasBackgroundImage="${properties.fileReference}"
+    data-sly-test.alignment="${properties.alignment || 'left'}"
+    data-sly-test.minHeight="${properties.minHeight || '500'}"
+    data-sly-test.overlayOpacity="${properties.overlayOpacity || '0.4'}">
+
+    <section class="cmp-hero ${hero.appliedCssClasses}" data-cmp-hero-alignment="${alignment}"
+        style="min-height: ${minHeight @ context='styleToken'}px;">
+
+        <div class="cmp-hero__background" data-sly-test="${hasBackgroundImage}">
+            <img class="cmp-hero__background-image" src="${properties.fileReference}" alt="${properties.alt || ''}"
+                loading="lazy" />
+            <div class="cmp-hero__overlay" style="opacity: ${overlayOpacity @ context='styleToken'};"></div>
+        </div>
+
+        <div class="cmp-hero__content cmp-hero__content--${alignment}">
+            <sly data-sly-test="${hero.isInEditor || wcmmode.edit || wcmmode.preview}">
+                <sly
+                    data-sly-resource="${resource @ resourceType='wcm/foundation/components/parsys/newpar', appendPath='/*', decorationTagName='div', cssClassName='new section aem-Grid-newComponent'}">
+                </sly>
+            </sly>
+            <sly
+                data-sly-resource="${resource @ resourceType='wcm/foundation/components/responsivegrid', decorationTagName='div', cssClassName='aem-Grid aem-Grid--12'}">
+            </sly>
+        </div>
+    </section>
+
+</sly>
+
+<sly data-sly-call="${templates.placeholder @ isEmpty=!hasBackgroundImage, classAppend='cmp-hero'}"></sly>

@@ -1,0 +1,83 @@
+.cmp-teaser {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-color: $color-surface;
+    border-radius: $border-radius;
+    overflow: hidden;
+    box-shadow: $shadow-md;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%; // Ensure equal height in grid
+
+    &:hover {
+        transform: translateY(-4px);
+        box-shadow: $shadow-lg;
+    }
+
+    &__image {
+        flex-shrink: 0;
+
+        .cmp-image__image {
+            width: 100%;
+            height: 200px; // Fixed height for consistency
+            object-fit: cover;
+            display: block;
+        }
+    }
+
+    &__content {
+        flex: 1 1 auto;
+        padding: $spacing-md;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__pretitle {
+        font-size: 0.875rem;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        color: $color-secondary;
+        margin-bottom: $spacing-xs;
+        font-weight: 600;
+    }
+
+    &__title {
+        font-family: $font-family-heading;
+        font-size: 1.25rem;
+        font-weight: 700;
+        margin-bottom: $spacing-sm;
+        color: $color-text-primary;
+
+        a {
+            color: inherit;
+            text-decoration: none;
+
+            &::after {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                z-index: 1; // Make the whole card clickable
+            }
+        }
+    }
+
+    &__description {
+        font-size: 1rem;
+        color: $color-text-secondary;
+        margin-bottom: $spacing-md;
+        flex-grow: 1;
+
+        p {
+            margin-bottom: 0;
+        }
+    }
+
+    &__action-container {
+        margin-top: auto;
+        position: relative;
+        z-index: 2; // Ensure buttons are clickable above the card link
+    }
+}

@@ -1,0 +1,63 @@
+//== Font
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+$font-family-base: 'Inter', "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-family-heading: 'Inter', "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-size-base: 16px;
+$font-height-base: 1.5;
+
+//== Color
+
+// Palette
+$color-primary: #0D47A1; // Deep Blue
+$color-secondary: #00BFA5; // Vibrant Teal
+$color-accent: #FFC107; // Amber
+$color-surface: #FFFFFF;
+$color-background: #F5F7FA; // Light Gray
+$color-text-primary: #212121;
+$color-text-secondary: #757575;
+$color-border: #E0E0E0;
+
+// Dark mode palette (derived or specific)
+$color-primary-dark: lighten($color-primary, 20%);
+$color-secondary-dark: lighten($color-secondary, 10%);
+$color-surface-dark: #1E1E1E;
+$color-background-dark: #121212;
+$color-text-primary-dark: #E0E0E0;
+$color-text-secondary-dark: #B0B0B0;
+
+//== Spacing
+$spacing-unit: 8px;
+$spacing-xs: $spacing-unit * 0.5; // 4px
+$spacing-sm: $spacing-unit; // 8px
+$spacing-md: $spacing-unit * 2; // 16px
+$spacing-lg: $spacing-unit * 3; // 24px
+$spacing-xl: $spacing-unit * 4; // 32px
+
+//== Borders
+$border-radius: 8px;
+$border-radius-sm: 4px;
+$border-radius-lg: 16px;
+
+//== Shadows
+$shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+$shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+$shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+
+//== Breakpoints
+$screen-sm: 576px;
+$screen-md: 768px;
+$screen-lg: 992px;
+$screen-xl: 1200px;
+
+//== Backward Compatibility
+$font-family: $font-family-base;
+$font-size: $font-size-base;
+$font-height: $font-height-base;
+$color-foreground: $color-text-primary;
+// $color-background is already defined
+$color-link: $color-primary;
+
+$color-foreground-dark: $color-text-primary-dark;
+$color-background-dark: $color-background-dark;
+$color-link-dark: $color-secondary;

@@ -1,0 +1,53 @@
+.cmp-button {
+    display: inline-block;
+    padding: $spacing-sm $spacing-md;
+    font-family: $font-family-base;
+    font-size: $font-size-base;
+    font-weight: 600;
+    line-height: 1.5;
+    color: $color-surface;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    cursor: pointer;
+    user-select: none;
+    background-color: $color-primary;
+    border: 1px solid transparent;
+    border-radius: $border-radius;
+    transition: all 0.2s ease-in-out;
+    box-shadow: $shadow-sm;
+
+    &:hover {
+        background-color: darken($color-primary, 10%);
+        color: $color-surface;
+        text-decoration: none;
+        transform: translateY(-1px);
+        box-shadow: $shadow-md;
+    }
+
+    &:focus {
+        outline: 0;
+        box-shadow: 0 0 0 0.2rem rgba($color-primary, 0.5);
+    }
+
+    &:disabled {
+        opacity: 0.65;
+        pointer-events: none;
+    }
+
+    // Secondary/Outline variant (optional, if supported by HTML structure)
+    &--secondary {
+        background-color: transparent;
+        color: $color-primary;
+        border-color: $color-primary;
+
+        &:hover {
+            background-color: $color-primary;
+            color: $color-surface;
+        }
+    }
+}
+
+// .cmp-button__text {}
+// .cmp-button__icon {}
+// .cmp-button__icon--myIcon {}

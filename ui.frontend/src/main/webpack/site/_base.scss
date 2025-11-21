@@ -1,0 +1,72 @@
+//== Base
+
+html,
+body {
+    margin: 0;
+    font-size: $font-size-base;
+    font-family: $font-family-base;
+    line-height: $font-height-base;
+    color: $color-text-primary;
+    background: $color-background;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    @media (prefers-color-scheme: dark) {
+        color: $color-text-primary-dark;
+        background: $color-background-dark;
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: $font-family-heading;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: $spacing-md;
+    color: inherit;
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: $spacing-md;
+}
+
+a {
+    color: $color-primary;
+    text-decoration: none;
+    transition: color 0.2s ease;
+
+    &:hover {
+        color: darken($color-primary, 10%);
+        text-decoration: underline;
+    }
+
+    @media (prefers-color-scheme: dark) {
+        color: $color-secondary; // Use secondary (teal) for links in dark mode for better contrast
+
+        &:hover {
+            color: lighten($color-secondary, 10%);
+        }
+    }
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+
+// Simple Reset for box-sizing
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
